@@ -10,17 +10,18 @@ import java.util.List;
 
 @Service
 public class UserService {
-    private final UserRepository userRepository;
 
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+	private final UserRepository userRepository;
 
-    public List<User> allUsers() {
-        List<User> users = new ArrayList<>();
+	public UserService(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
 
-        userRepository.findAll().forEach(users::add);
+	public List<User> allUsers() {
+		List<User> users = new ArrayList<>();
 
-        return users;
-    }
+		userRepository.findAll().forEach(users::add);
+
+		return users;
+	}
 }

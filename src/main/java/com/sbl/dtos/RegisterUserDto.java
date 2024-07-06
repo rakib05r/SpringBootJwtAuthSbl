@@ -1,11 +1,10 @@
 package com.sbl.dtos;
 
 public class RegisterUserDto {
-private String email;
-    
-    private String password;
-    
-    private String fullName;
+
+	private String email;
+	private String password;
+	private String fullName;
 
 	public String getEmail() {
 		return email;
@@ -35,6 +34,5 @@ private String email;
 	public String toString() {
 		return "RegisterUserDto [email=" + email + ", password=" + password + ", fullName=" + fullName + "]";
 	}
-    
-    
+
 }

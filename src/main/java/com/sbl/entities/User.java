@@ -13,66 +13,64 @@ import java.util.List;
 @Table(name = "users")
 @Entity
 public class User implements UserDetails {
-    /**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false)
-    private Integer id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(nullable = false)
+	private Integer id;
 
-    @Column(nullable = false)
-    private String fullName;
+	@Column(nullable = false)
+	private String fullName;
 
-    @Column(unique = true, length = 100, nullable = false)
-    private String email;
+	@Column(unique = true, length = 100, nullable = false)
+	private String email;
 
-    @Column(nullable = false)
-    private String password;
+	@Column(nullable = false)
+	private String password;
 
-    @CreationTimestamp
-    @Column(updatable = false, name = "created_at")
-    private Date createdAt;
+	@CreationTimestamp
+	@Column(updatable = false, name = "created_at")
+	private Date createdAt;
 
-    @UpdateTimestamp
-    @Column(name = "updated_at")
-    private Date updatedAt;
+	@UpdateTimestamp
+	@Column(name = "updated_at")
+	private Date updatedAt;
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
-    }
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		return List.of();
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    @Override
-    public String getUsername() {
-        return email;
-    }
+	@Override
+	public String getUsername() {
+		return email;
+	}
 
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
+	@Override
+	public boolean isAccountNonExpired() {
+		return true;
+	}
 
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
+	@Override
+	public boolean isAccountNonLocked() {
+		return true;
+	}
 
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
+	@Override
+	public boolean isCredentialsNonExpired() {
+		return true;
+	}
 
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
+	@Override
+	public boolean isEnabled() {
+		return true;
+	}
 
 	public Integer getId() {
 		return id;
@@ -129,7 +127,7 @@ public class User implements UserDetails {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-    
-    // Getters and setters
-    
+
+	// Getters and setters
+
 }

@@ -1,9 +1,9 @@
 package com.sbl.model;
 
 public class LoginResponse {
-	private String token;
 
-    private long expiresIn;
+	private String token;
+	private long expiresIn;
 
 	public String getToken() {
 		return token;
@@ -26,6 +26,5 @@ public class LoginResponse {
 		this.token = token;
 		this.expiresIn = expiresIn;
 	}
-    
-    
+
 }
